@@ -9,7 +9,7 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 01: Visualize data
 
 <p align="center">
-  <img src="./fig/01a_raw_data.png" width="350" title="raw data">
+  <img src="./figs/01a_raw_data.png" width="350" title="raw data">
 </p>
 
 ### 02: Calculate cross-correlations
