@@ -21,7 +21,7 @@ datafile = './data/Fs1Hz_dx10m_Belgium_data.npy'
 save_plots = True
 
 # Parameters
-nx = 3000                # number of channels
+nx = 1000                # number of channels
 ns = 4200                # number of samples
 fs = 1                   # sampling rate (Hz)
 dx = 10                  # channel spacing (m)
@@ -51,7 +51,7 @@ xx = x[idx]
 tt = t[idt]
 
 # Plot the data
-v = 1e3
+v = 1e2
 fig1,ax = plt.subplots(1,2,figsize=(12,8))
 ax[0].pcolormesh(xx,tt,data_slice.T,cmap='RdBu',vmin=-v,vmax=v)
 ax[0].set_xlabel('Distance (m)')
@@ -63,8 +63,8 @@ ax[0].set_title('Raw DAS data')
 ## (B) Plot frequency-wavenumber spectrum  ################################
 
 # Take a larger slice of the dataset
-xmin = 10000
-xmax = 20000
+xmin = 0
+xmax = 10000
 idx = np.logical_and(x>=xmin,x<=xmax)
 
 tmin = 0
@@ -111,7 +111,7 @@ f = np.fft.rfftfreq(ns,d=1./fs)
 
 # Plot spectrum along cable
 fig2,ax = plt.subplots(1,1,figsize=(10,5))
-ax.pcolormesh(x,f,spec.T,cmap='jet',vmin=0,vmax=100)
+ax.pcolormesh(x,f,spec.T,cmap='jet',vmin=10,vmax=90)
 ax.set_xlabel('Distance (m)')
 ax.set_ylabel('Frequency (Hz)')
 ax.set_title('Spectrum vs. distance')
