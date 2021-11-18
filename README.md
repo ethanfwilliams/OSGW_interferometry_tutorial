@@ -9,7 +9,11 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 01: Visualize data
 
 <p align="center">
-  <img src="./figs/01a_raw_data.png" width="350" title="raw data">
+  <img src="./figs/01a_raw_data.png" width="700" title="raw data">
+</p>
+
+<p align="center">
+  <img src="./figs/01b_spectrum.png" width="700" title="spectrum">
 </p>
 
 ### 02: Calculate cross-correlations
@@ -17,6 +21,9 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 
 ### 03: Visualize cross-correlations
 
+<p align="center">
+  <img src="./figs/03_ncf_stack.png" width="700" title="ncfs">
+</p>
 
 ### 04: Measure subarray OSGW dispersion (example)
 
