@@ -145,6 +145,11 @@ ax[1].set_xlabel('Frequency (Hz)')
 ax[1].set_ylabel('Phase speed (m/s)')
 plt.legend()
 
+## Save
+if save_plots:
+  fig.savefig('./figs/04_ex_disp.png')
+
+
 
 plt.show()
 
