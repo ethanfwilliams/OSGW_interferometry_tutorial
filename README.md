@@ -8,6 +8,9 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 
 ### 01: Visualize data
 
+<p align="center">
+  <img src="./fig/01a_raw_data.png" width="350" title="raw data">
+</p>
 
 ### 02: Calculate cross-correlations
 
@@ -15,7 +18,10 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 03: Visualize cross-correlations
 
 
-### 04: Measure subarray OSGW dispersion
+### 04: Measure subarray OSGW dispersion (example)
+
+
+### 05: Measure subarray OSGW dispersion (for all subarrays)
 
 
 ### 05: Invert mean state
