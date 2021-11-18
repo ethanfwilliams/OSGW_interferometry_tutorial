@@ -27,6 +27,10 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 
 ### 04: Measure subarray OSGW dispersion (example)
 
+<p align="center">
+  <img src="./figs/04_ex_disp.png" width="500" title="ncfs">
+</p>
+
 
 ### 05: Measure subarray OSGW dispersion (for all subarrays)
 
