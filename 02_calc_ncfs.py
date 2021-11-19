@@ -54,39 +54,6 @@ def fk_filt(tr_in,fs,dx,sgn='pos',cmin=5,cmax=50):
     tr_out = np.fft.ifft2(np.fft.fftshift(ft2f)).astype(float)
     return tr_out
 
-def get_correlation_fk(data,nnx,nns,nnw,nwn,nov,fmin,fmax,fs,dx,sgn):
-    ''' 
-    Get cross correlations of each sub-window and stack
-
-    This function isn't used here, but I've included it in case you want to calculate all pairs
-    '''
-    nc = int((nnx**2 + nnx)/2)
-    trxc = np.zeros((nc,nns))
-    spxc = np.zeros((nc,nnw),dtype=np.complex_)
-    for n in range(nwn):
-        # window data
-        tr = data[:,n*nov:(n*nov + nns)]
-        # pre-process
-        for ix in range(nnx):
-            tr[ix,:] = detrend(tr[ix,:])
-            tr[ix,:] = bp(tr[ix,:],df=fs,freqmin=fmin,freqmax=fmax,zerophase=True)
-        tr = fk_filt(tr,fs,dx,sgn)
-        sp = np.zeros((nnx,nnw),dtype=np.complex_)
-        # pre-process
-        for ix in range(nnx):
-            sp[ix,:] = np.fft.rfft(tr[ix,:])
-            sp[ix,:] = whiten2(sp[ix,:],fs,fmin,fmax)
-        # correlate
-        k = 0
-        for ix in range(nnx):
-            for iy in range(ix,nnx):
-                 spxc[k,:] += np.conj(sp[ix,:]) * sp[iy,:]
-                 k += 1
-    # inverse fft
-    for ix in range(nc):
-        trxc[ix,:] = np.fft.irfft(spxc[ix,:])
-    return trxc
-
 def get_src_gather_fk(data,src,rec_arr,nnx,nns,nnw,nwn,nov,fmin,fmax,fs,dx,sgn):
     ''' 
     Get a virtual source gather of cross-correlations from src to rec_arr 
