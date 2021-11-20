@@ -1,6 +1,6 @@
 # Supporting code for OSGW interferometry
 
-Williams, E.F., et al. (submitted) "Surface gravity wave interferometry and ocean current monitoring with ocean-bottom DAS," <i>EarthArXiv</i>
+Williams, E.F., et al. (to be submitted) "Surface gravity wave interferometry and ocean current monitoring with ocean-bottom DAS," <i>EarthArXiv link coming soon</i>
 
 This repository contains example scripts to compute OSGW cross-correlations, measure dispersion, and invert for current speed. The original code for the paper was written in a (messy but fast) combination of Python, Fortran, and CUDA Fortran. Here, I have re-written the key steps in simple Python in order to process a small demonstration set of cross-correlation pairs. 
 
@@ -62,7 +62,7 @@ Given all our picks, we can now fit a model dispersion curve using non-linear le
 The results are great (maybe more interesting than the results in the manuscript---pity this dataset is so short). The inverted depth profile closely matches the bathymetry, including the double-crested tidal sand bank in the middle of the cable. We can actually see that our co-registration of the optical distance with cable geometry is off by about 200 m. The current speed is reasonable, and varies in a plausible way. The tides obey the shallow-water equations, so the ~50% reduction in water depth going across Thornton Bank is expected to both increase the amplitude of the tide and cause a phase shift. We can see that the tidal flow in the swale at 5-7 km is out of phase with the tide on either side of the sandbank. 
 
 <p align="center">
-  <img src="./figs/07b_mean_state.png" width="800" title="mean state">
+  <img src="./figs/07b_mean_state.png" width="700" title="mean state">
 </p>
 
 
@@ -71,13 +71,13 @@ The results are great (maybe more interesting than the results in the manuscript
 Having established a reference state (the water depth along the cable and the mean current speed), we can now go about differential current measurement for the two 2800-s overlapping time windows using the modified stretching method proposed in the manuscript. NCFs for "hour 0" and "hour 1" (our two windows) show a consistent change in the Doppler shift with increasing current velocity with time (faster current along the positive-distance direction is a negative time shift in the causal side because the waves are propagating faster). 
 
 <p align="center">
-  <img src="./figs/08a_traces.png" width="500" title="traces">
+  <img src="./figs/08a_traces.png" width="700" title="traces">
 </p>
 
 Shifting the reference trace to match each hourly NCF, we grid search over a range of possible current velocities. Measuring only the anti-causal or the causal side yields a consistent sign to the change in current speed for this example NCF pair, but the magnitude differs slightly. Combining the two into a single Doppler-averaged correlation coefficient gives us the best estimate. 
 
 <p align="center">
-  <img src="./figs/08b_corrcoeff.png" width="500" title="cc">
+  <img src="./figs/08b_corrcoeff.png" width="700" title="cc">
 </p>
 
 The script should run pretty quickly. It only performs this stretching step for the NCF pairs with a 200-m offset, though you can change it to see what happens. 
