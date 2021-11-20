@@ -35,14 +35,22 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 05: Measure subarray OSGW dispersion (for all subarrays)
 
 
-### 05: Invert mean state
+### 06: Invert mean state
 
 
-### 06: Visualize dispersion & mean state
+### 07: Visualize dispersion & mean state
+
+<p align="center">
+  <img src="./figs/07_dispersion.png" width="500" title="ncfs">
+</p>
+
+<p align="center">
+  <img src="./figs/07b_mean_state.png" width="500" title="ncfs">
+</p>
 
 
-### 07: Measure time-lapse by stretching
+### 08: Measure time-lapse by stretching
 
 
-### 08: Visualize time-lapse current
+### 09: Visualize time-lapse current
 
