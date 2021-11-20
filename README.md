@@ -2,7 +2,7 @@
 
 Williams, E.F., et al. (to be submitted) "Surface gravity wave interferometry and ocean current monitoring with ocean-bottom DAS," <i>EarthArXiv link coming soon</i>
 
-This repository contains example scripts to compute OSGW cross-correlations, measure dispersion, and invert for current speed. The original code for the paper was written in a (messy but fast) combination of Python, Fortran, and CUDA Fortran. Here, I have re-written the key steps in simple Python in order to process a small demonstration set of cross-correlation pairs. 
+This repository contains example scripts to compute OSGW cross-correlations, measure dispersion, and invert for current speed. The original code for the paper was written in a (messy but fast) combination of Python, Fortran, and CUDA Fortran. Here, I have re-written the key steps in simple Python in order to process a small demonstration set of cross-correlation pairs. Let me know if you find errors (`efwillia@caltech.edu`).
 
 The example here uses the small dataset from Williams et al. (2019) <i> Nat. Comms.</i>, which can be found on the <a href="http://dx.doi.org/10.22002/D1.1296">CaltechDATA archive</a>. In order to fit this on GitHub, I have cut out only the 10-km segment from 25-35 km cable distance, which includes the large bathymetric feature of Thornton Bank, a tidal sand ridge. The data file included here has been decimated from 10 Hz to 1 Hz simply by averaging. The dataset is 4200 seconds long. Because this dataset is different from the Gibraltar dataset in several respects (shorter, shallower bathymetry, etc.) some of the parameters used in the calculations below are different from those in the manuscript. 
 
