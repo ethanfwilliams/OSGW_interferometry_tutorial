@@ -41,7 +41,7 @@ picks = np.load(os.path.join(dispdir,'dispersion_picks.npy'))
 
 ## Set geometry
 srcs = np.arange(0,1000-200,10,dtype=int)
-mpts = (srcs + srcs + 200)/2
+mpts = 10 * (srcs + srcs + 200)/2
 nx = picks.shape[0]
 nf = picks.shape[1]
 
