@@ -85,6 +85,10 @@ The script should run pretty quickly. It only performs this stretching step for 
 
 ### 09: Visualize time-lapse current
 
-Finally, combining our mean current with the differential measurements for each hour, we get the absolute current as a function of time and distance. 
+Finally, combining our mean current with the differential measurements for each hour, we get the absolute current as a function of time and distance. Generally, the current increased by ~0.05 m/s from hour 0 to 1 between 5-10 km and stayed the same over the first 5 km. This could reflect the difference in tidal phase going over the Thornton Bank, or just the measurement uncertainty with only 2800-s data windows. 
 
+
+<p align="center">
+  <img src="./figs/09_abs_current.png" width="700" title="current">
+</p>
 
