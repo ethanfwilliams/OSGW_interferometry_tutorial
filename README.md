@@ -28,7 +28,7 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 04: Measure subarray OSGW dispersion (example)
 
 <p align="center">
-  <img src="./figs/04_ex_disp.png" width="500" title="ncfs">
+  <img src="./figs/04_ex_disp.png" width="500" title="dispersion">
 </p>
 
 
@@ -41,11 +41,11 @@ The example here uses the small dataset from Williams et al. (2019) <i> Nat. Com
 ### 07: Visualize dispersion & mean state
 
 <p align="center">
-  <img src="./figs/07_dispersion.png" width="500" title="ncfs">
+  <img src="./figs/07a_dispersion.png" width="500" title="inversion">
 </p>
 
 <p align="center">
-  <img src="./figs/07b_mean_state.png" width="500" title="ncfs">
+  <img src="./figs/07b_mean_state.png" width="500" title="mean state">
 </p>
 
 
